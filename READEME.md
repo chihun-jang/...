@@ -11,7 +11,14 @@
 
 `$ python -m ipykernel install --user --name venv --display-name "myvenv"`
 
+### verbose mode
 
+0 = silent, 
+1 = progress bar, 
+2 = one line per epoch.
+
+### Segmentation fault
+저장하는 file 과 불러오는 file의 경로가 다를 경우 발생했었음.
 # quickstart
 
 기본적인 mnist를 이용한 예제인데 begin에서는 주어진 keras의 층을 하나하나 쌓아나가고
@@ -68,3 +75,11 @@ overfitting을 막는 방법에 대해서 설명해준다.
 
 > 해당 예제를 통해서 가중치를 규제하는 경우는 아직 이해가 어려운 부분이 많지만 모델의 용량을 조절하는 것이나, dropout을 이용해서
 > overfitting의 타이밍을 늦추거나 이후에 일어나는 성능저하는 천천히 가져갈수 있는 연습을 해보았다.
+
+
+
+# save and recovery
+
+드디어 기다리고 기다리던 학습한 or 학습중인 model의 저장과 불러오기 기능을 배웠다.
+물론 tf.keras에서 지원하는 기능을 활용한 부분이지만
+check_point를 정해서 period 마다 저장하기, 가중치만 저장하기, model전체를 저장하는 방법을 알아보고 실습해볼수 있었다.
